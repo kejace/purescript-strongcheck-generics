@@ -10,7 +10,7 @@ module Test.StrongCheck.Generic
 import Prelude
 import Data.Array (filter, length, nub, uncons, zipWith, (:))
 import Data.Foldable (class Foldable, fold, foldMap)
-import Data.Generic (class Generic, GenericSignature(..), GenericSpine(..), fromSpine, toSignature, toSpine)
+import Data.Generic.Rep (class Generic, GenericSignature(..), GenericSpine(..), fromSpine, toSignature, toSpine)
 import Data.Int (toNumber)
 import Data.List (fromFoldable)
 import Data.Maybe (fromJust)

@@ -2,10 +2,9 @@ module StrongCheckExample (exampleMain) where
 
 import Prelude
 
-import Control.Monad.Eff (Eff)
-import Control.Monad.Eff.Console (CONSOLE)
+import Effect (Effect)
 
-import Data.Generic (class Generic, gShow)
+import Data.Generic.Rep (class Generic, gShow)
 
 import Test.StrongCheck.Gen (Gen, showSample)
 import Test.StrongCheck.Generic (gArbitrary)
@@ -17,5 +16,5 @@ derive instance genericTree :: (Generic a) => Generic (Tree a)
 instance showTree :: (Show a, Generic a) => Show (Tree a) where
   show = gShow
 
-exampleMain :: forall eff. Eff (console :: CONSOLE | eff) Unit
+exampleMain :: Effect Unit
 exampleMain = showSample (gArbitrary :: Gen (Tree Int))

@@ -4,7 +4,7 @@ import Prelude
 import Control.Monad.Trampoline (runTrampoline)
 import Data.Array (null)
 import Data.Foldable (any)
-import Data.Generic (class Generic, gShow, isValidSpine)
+import Data.Generic.Rep (class Generic, gShow, isValidSpine)
 import Partial.Unsafe (unsafePartial)
 import Test.StrongCheck (SC, arbitrary, assert, quickCheck)
 import Test.StrongCheck.Arbitrary (class Coarbitrary, class Arbitrary)
